@@ -45,7 +45,7 @@ ynh_script_progression --message="Setting up source files..." --weight=3
 if [ $YNH_ARCH == "armhf" ] || [ $YNH_ARCH == "arm64" ]
 then
 	ynh_setup_source --dest_dir="$install_dir/build"
-	pushd "$install_dir"
+	pushd "$install_dir/build"
 		# Build the sources
 		ynh_use_go
 		export GOPATH="$install_dir/build/go"
